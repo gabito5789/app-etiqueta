@@ -19,8 +19,14 @@ source.dir = .
 source.include_exts = py,png,jpg,kv,atlas,txt
 
 # (list) Application requirements
-# ¡Ojo aquí! Usamos fpdf y quitamos openpyxl para evitar errores en Android
-requirements = python3, kivy, fpdf
+requirements = python3,kivy,fpdf
+
+# (str) Custom source for python-for-android
+p4a.branch = master
+
+# (str) Supported python version
+osx.python_version = 3
+android.python_api = 31
 
 # (str) Supported orientations
 orientation = portrait
