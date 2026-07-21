@@ -18,12 +18,21 @@ jobs:
         distribution: 'temurin'
         java-version: '17'
 
+    - name: Instalar dependencias del sistema
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y git zip unzip openjdk-17-jdk python3-pip autoconf libtool pkg-config zlib1g-dev libncurses5-dev libncursesw5-dev libtinfo5 cmake libffi-dev libssl-dev
+
+    - name: Instalar Buildozer y herramientas
+      run: |
+        pip3 install --upgrade pip
+        pip3 install --user --upgrade Cython==0.29.33 virtualenv
+        pip3 install --user --upgrade buildozer
+
     - name: Compilar APK con Buildozer
-      uses: ArtemSBulgakov/buildozer-action@v1
-      with:
-        command: buildozer -v android debug
-        buildozer_version: master
-        container_profile: none
+      run: |
+        export PATH=$PATH:~/.local/bin
+        buildozer -v android debug
 
     - name: Subir el APK generado
       uses: actions/upload-artifact@v4
