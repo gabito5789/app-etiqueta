@@ -19,7 +19,7 @@ source.dir = .
 source.include_exts = py,png,jpg,kv,atlas,txt
 
 # (list) Application requirements
-requirements = python3,kivy,fpdf
+requirements = python310,kivy,fpdf
 
 # (str) Custom source for python-for-android
 p4a.branch = master
