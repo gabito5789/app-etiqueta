@@ -29,13 +29,13 @@ orientation = portrait
 android.permissions = READ_EXTERNAL_STORAGE, WRITE_EXTERNAL_STORAGE
 
 # (int) Target Android API, should be as high as possible.
-android.api = 33
+android.api = 31
 
 # (int) Minimum API your APK will support
-android.minapi = 24
+android.minapi = 21
 
 # (str) Android NDK version
 android.ndk = 25b
 
-# (str) Android arch to build for
-android.archs = arm64-v8a, armeabi-v7a
+# (str) Android sdk update accept (true/false)
+android.accept_sdk_license = True
