@@ -9,6 +9,12 @@ package.name = etiquetador
 # (str) Package domain (needed for android packaging)
 package.domain = org.etiquetador
 
+# (str) Version of your application
+version = 0.1
+
+# (str) Source code where the application resides
+source.dir = .
+
 # (list) Source files to include (let it blank to include all files)
 source.include_exts = py,png,jpg,kv,atlas,txt
 
